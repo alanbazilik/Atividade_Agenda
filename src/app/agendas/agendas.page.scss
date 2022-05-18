@@ -1,0 +1,21 @@
+.menu a:focus{
+  color: red;
+  font-family: cursive ;
+  text-decoration: double ;
+}
+.menu a::shadow {
+color: blue;
+font-size: 25px;
+}
+ion-title{
+  font-family: Arial monospace;
+  font-size: 28px;
+  }
+  div.menu a{
+    text-align: right;
+    text-decoration: none;
+  }
+  .fundo{
+    height:100vh ;
+    background-image: url("../../assets/b1b49e1c2d460f21981330964a3e5ea8.jpg");
+  }
