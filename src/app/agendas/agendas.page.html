@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>agendas</ion-title>
+    <ion-title> Agendas & eventos</ion-title>
     <div class="menu">
       <a routerLink="/home">home </a>
       <a routerLink="/eventos">eventos</a>
@@ -10,32 +10,36 @@
 
 <ion-content>
   <div class="fundo">
-    <ion-input type=nome>Digita seu nome</ion-input>
-    <ion-input type=nome>Digita seu email</ion-input>
-    <ion-input type=nome>Digita seu telefone</ion-input>
-    <ion-textarea rows="6" cols="20" placeholder="messagem"></ion-textarea>
+    <ion-input [(ngModel)]="agendas.nome" type=nome>Digita seu nome</ion-input>
+    <ion-input [(ngModel)]="agendas.email" type=email>Digita seu email</ion-input>
+    <ion-input [(ngModel)]="agendas.telefone" type=telefone>Digita seu telefone</ion-input>
+    <ion-textarea [(ngModel)]="agendas.messagem" rows="6" cols="20" placeholder="messagem"></ion-textarea>
 
     <ion-button color="primary" (click)="salvar()">Cradastrar</ion-button>
 
-    <ion-list>
-      <ion-item>
-        <ion-label>Nome:</ion-label> <ion-label>{{nome}}</ion-label>
-      </ion-item>
-    </ion-list>
-    <ion-list>
-      <ion-item>
-        <ion-label>email:</ion-label>  <ion-label>{{email}}</ion-label>
-      </ion-item>
-    </ion-list>
-    <ion-list>
-      <ion-item>
-        <ion-label>telefone:</ion-label> <ion-label>{{telefone}}</ion-label>
-      </ion-item>
-    </ion-list>
-        <ion-list>
-          <ion-item>
-            <ion-label>messagem:</ion-label> <ion-label>{{messagem}}</ion-label>
-          </ion-item>
-        </ion-list>
+    <div *ngFor="let item of Agendas_crad">
+      <ion-list>
+        <ion-item>
+          <ion-label>Nome:</ion-label> <ion-label>{{item.nome}}</ion-label>
+        </ion-item>
+      </ion-list>
+      <ion-list>
+        <ion-item>
+          <ion-label>email:</ion-label>  <ion-label>{{item.email}}</ion-label>
+        </ion-item>
+      </ion-list>
+      <ion-list>
+        <ion-item>
+          <ion-label>telefone:</ion-label> <ion-label>{{item.telefone}}</ion-label>
+        </ion-item>
+      </ion-list>
+          <ion-list>
+            <ion-item>
+              <ion-label>messagem:</ion-label> <ion-label>{{item.messagem}}</ion-label>
+            </ion-item>
+          </ion-list>
+    </div>
+    
   </div>
+  
 </ion-content>
