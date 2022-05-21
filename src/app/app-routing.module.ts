@@ -18,7 +18,19 @@ const routes: Routes = [
   {
     path: 'eventos',
     loadChildren: () => import('./eventos/eventos.module').then( m => m.EventosPageModule)
+  },  {
+    path: 'list',
+    loadChildren: () => import('./list/list.module').then( m => m.ListPageModule)
   },
+  {
+    path: 'lista-agenda',
+    loadChildren: () => import('./lista-agenda/lista-agenda.module').then( m => m.ListaAgendaPageModule)
+  },
+  {
+    path: 'avaliar',
+    loadChildren: () => import('./avaliar/avaliar.module').then( m => m.AvaliarPageModule)
+  },
+
 ];
 
 @NgModule({

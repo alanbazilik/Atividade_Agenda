@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>lista de evento</ion-title>
+    <div class="menu" >
+      <a  routerLink="/home">home </a>
+      <a routerLink="/eventos">Cradastar eventos </a>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="fundo">
+    <div *ngFor="let item of eventos_crad">
+      <ion-list>
+        <ion-item>
+          <ion-label>Nome do evento:</ion-label> <ion-label>{{item.nome_eventos}}</ion-label>
+        </ion-item>
+      </ion-list>
+      <ion-list>
+        <ion-item>
+          <ion-label>Data:</ion-label>  <ion-label>{{item.Data}}</ion-label>
+        </ion-item>
+      </ion-list>
+      <ion-list>
+        <ion-item>
+          <ion-label>Hora:</ion-label> <ion-label>{{item.Hora}}</ion-label>
+        </ion-item>
+      </ion-list>
+          <ion-list>
+            <ion-item>
+              <ion-label>messagem:</ion-label> <ion-label>{{item.messagem}}</ion-label>
+            </ion-item>
+          </ion-list>
+    </div>  
+</div>
+
+  <ion-button routerLink="/eventos" color="success">cradastrar evento</ion-button>
+</ion-content>

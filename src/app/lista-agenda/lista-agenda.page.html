@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>lista_agenda</ion-title>
+    <div class="menu">
+      <a routerLink="/home">home </a>
+      <a routerLink="/agendas">Cradastrar Agenda</a>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="fundo">
+  <div *ngFor="let item of Agendas_crad">
+    <ion-list>
+      <ion-item>
+        <ion-label>Nome:</ion-label> <ion-label>{{item.nome}}</ion-label>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-item>
+        <ion-label>email:</ion-label>  <ion-label>{{item.email}}</ion-label>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-item>
+        <ion-label>telefone:</ion-label> <ion-label>{{item.telefone}}</ion-label>
+      </ion-item>
+    </ion-list>
+        <ion-list>
+          <ion-item>
+            <ion-label>messagem:</ion-label> <ion-label>{{item.messagem}}</ion-label>
+          </ion-item>
+        </ion-list>
+  </div>
+</div>
+</ion-content>

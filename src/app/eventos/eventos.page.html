@@ -10,35 +10,19 @@
 
 <ion-content>
   <div class="fundo">
-<ion-input [(ngModel)]="Eventos.nome_eventos" type= nome>Digita seu nome do evento</ion-input>
-<ion-input [(ngModel)]="Eventos.Data" type= date> Data:</ion-input>
-<ion-input [(ngModel)]="Eventos.Hora" type= time>horas:</ion-input>
-<ion-label>lembrete
-<ion-checkbox color="dark"></ion-checkbox></ion-label>
-<ion-textarea [(ngModel)]="Eventos.messagem" rows="6" cols="20" placeholder="messagem"></ion-textarea>
-  <ion-button (click)="salvar()" color="primary">Cradastrar</ion-button>
+    <div class="form">
+      <ion-input [(ngModel)]="Eventos.nome_eventos" type= nome>Digita seu nome do evento</ion-input>
+      <ion-input [(ngModel)]="Eventos.Data" type= date> Data:</ion-input>
+      <ion-input [(ngModel)]="Eventos.Hora" type= time>horas:</ion-input>
+      <ion-label>lembrete
+      <ion-checkbox color="dark"></ion-checkbox></ion-label>
+      <ion-textarea [(ngModel)]="Eventos.messagem" rows="6" cols="20" placeholder="messagem"></ion-textarea>
+        <ion-button (click)="salvar()" color="primary">Cradastrar</ion-button>
+      
+        
+        <ion-button routerLink="/list" color="success">lista de evento</ion-button>
+    </div>
 </div>
-<div *ngFor="let item of eventos_crad">
-  <ion-list>
-    <ion-item>
-      <ion-label>Nome do evento:</ion-label> <ion-label>{{item.nome_eventos}}</ion-label>
-    </ion-item>
-  </ion-list>
-  <ion-list>
-    <ion-item>
-      <ion-label>Data:</ion-label>  <ion-label>{{item.Data}}</ion-label>
-    </ion-item>
-  </ion-list>
-  <ion-list>
-    <ion-item>
-      <ion-label>Hora:</ion-label> <ion-label>{{item.Hora}}</ion-label>
-    </ion-item>
-  </ion-list>
-      <ion-list>
-        <ion-item>
-          <ion-label>messagem:</ion-label> <ion-label>{{item.messagem}}</ion-label>
-        </ion-item>
-      </ion-list>
-</div>
+
 
 </ion-content>

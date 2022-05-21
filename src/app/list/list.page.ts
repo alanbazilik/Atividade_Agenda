@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import{ EventosService } from 'src/app/api/eventos.service';
 @Component({
-  selector: 'app-eventos',
-  templateUrl: './eventos.page.html',
-  styleUrls: ['./eventos.page.scss'],
+  selector: 'app-list',
+  templateUrl: './list.page.html',
+  styleUrls: ['./list.page.scss'],
 })
-export class EventosPage implements OnInit {
+export class ListPage implements OnInit {
 
   constructor(private EventoService: EventosService) { }
   Eventos = {

@@ -16,30 +16,8 @@
     <ion-textarea [(ngModel)]="agendas.messagem" rows="6" cols="20" placeholder="messagem"></ion-textarea>
 
     <ion-button color="primary" (click)="salvar()">Cradastrar</ion-button>
-
-    <div *ngFor="let item of Agendas_crad">
-      <ion-list>
-        <ion-item>
-          <ion-label>Nome:</ion-label> <ion-label>{{item.nome}}</ion-label>
-        </ion-item>
-      </ion-list>
-      <ion-list>
-        <ion-item>
-          <ion-label>email:</ion-label>  <ion-label>{{item.email}}</ion-label>
-        </ion-item>
-      </ion-list>
-      <ion-list>
-        <ion-item>
-          <ion-label>telefone:</ion-label> <ion-label>{{item.telefone}}</ion-label>
-        </ion-item>
-      </ion-list>
-          <ion-list>
-            <ion-item>
-              <ion-label>messagem:</ion-label> <ion-label>{{item.messagem}}</ion-label>
-            </ion-item>
-          </ion-list>
-    </div>
-    
+    <ion-button routerLink="/lista-agenda" color="success">lista de agenda</ion-button>
+ 
   </div>
   
 </ion-content>
