@@ -9,11 +9,11 @@ export class EventosService {
   urlApi = " http://127.0.0.1:8000/api";
   constructor(private http: HttpClient) { }
 
-  getAgendas(){
+  geteventos(){
     return this.http.get(`${this.urlApi}/Eventos`);
     }
-    saveagenda(eventos){
-      return this.http.post(`${this.urlApi}/evento`, eventos);
+    saveeventos(evento){
+      return this.http.post(`${this.urlApi}/evento`, evento);
   
     }
 }
