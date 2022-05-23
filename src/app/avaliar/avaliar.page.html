@@ -10,11 +10,47 @@
 
 <ion-content>
   <div class="fundo">
+    <ion-list>
+      <ion-item>
+        <ion-label>1 Pessimo</ion-label>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-item>
+        <ion-label>2 medio</ion-label>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-item>
+        <ion-label>3 mais menos</ion-label>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-item>
+        <ion-label>4 bom</ion-label>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-item>
+        <ion-label>5 otimo</ion-label>
+      </ion-item>
+    </ion-list>
     <ion-label>avaliação com Estrelas </ion-label>
-    <ion-button (click)="avalir()"><ion-icon name="star"></ion-icon>1</ion-button>
-    <ion-button><ion-icon name="star"></ion-icon>2</ion-button>
-    <ion-button><ion-icon name="star"></ion-icon>3</ion-button>
-    <ion-button><ion-icon name="star"></ion-icon>4</ion-button>
-    <ion-button><ion-icon name="star"></ion-icon>5</ion-button>
+    <ion-button (click)="avalir1()"><ion-icon name="star"></ion-icon>1</ion-button>
+    <ion-button (click)="avalir2()"><ion-icon name="star"></ion-icon>2</ion-button>
+    <ion-button (click)="avalir3()"><ion-icon name="star"></ion-icon>3</ion-button>
+    <ion-button (click)="avalir4()"><ion-icon name="star"></ion-icon>4</ion-button>
+    <ion-button (click)="avalir5()"><ion-icon name="star"></ion-icon>5</ion-button>
+ <br>
+ <div class="messagem de Avaliação">
+    <ion-label>
+     Nome:
+ <ion-input></ion-input></ion-label>
+   
+      <textarea name="messagemavar" id="" cols="48" rows="10"></textarea>
+    </div>
+    <ion-button color="primary" (click)="salvar()">Cradastrar</ion-button>
+    <br>
   </div>
+ 
 </ion-content>
