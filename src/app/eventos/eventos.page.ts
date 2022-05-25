@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import{ EventosService } from 'src/app/api/eventos.service';
+import { AlertController } from '@ionic/angular';
 @Component({
   selector: 'app-eventos',
   templateUrl: './eventos.page.html',
@@ -7,7 +8,7 @@ import{ EventosService } from 'src/app/api/eventos.service';
 })
 export class EventosPage implements OnInit {
 
-  constructor(private EventoService: EventosService) { }
+  constructor(private EventoService: EventosService,public alertController: AlertController) { }
   Eventos = {
     nome_eventos: '',
     Data: '',
@@ -19,9 +20,16 @@ export class EventosPage implements OnInit {
     this.list()
   }
 
+  async presentAlertMultipleButtons() {
+    const alert = await this.alertController.create({
+      message: "Eventos salvo",
+    });
+
+    await alert.present();
+  }
   salvar(){
     this.EventoService.saveeventos(this.Eventos).subscribe(res => {
-      console.log("Evento foi Salvo");
+      this.presentAlertMultipleButtons()
       
     })
   }

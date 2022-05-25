@@ -11,12 +11,15 @@
 <ion-content>
   <div class="fundo">
     <div class="form">
-      <ion-input [(ngModel)]="Eventos.nome_eventos" type= nome>Digita seu nome do evento</ion-input>
+      <ion-input (click)="alerts1(abilitou)" [(ngModel)]="Eventos.nome_eventos" type= nome>Digita seu nome do evento</ion-input>
       <ion-input [(ngModel)]="Eventos.Data" type= date> Data:</ion-input>
       <ion-input [(ngModel)]="Eventos.Hora" type= time>horas:</ion-input>
-      <ion-label>lembrete
-      <ion-checkbox color="dark"></ion-checkbox></ion-label>
+      <br>
+      <ion-label>lembrete:</ion-label>
+      <ion-checkbox  color="primary"></ion-checkbox>
+      <br>
       <ion-textarea [(ngModel)]="Eventos.messagem" rows="6" cols="20" placeholder="messagem"></ion-textarea>
+    
         <ion-button (click)="salvar()" color="primary">Cradastrar</ion-button>
       
         

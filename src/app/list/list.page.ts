@@ -18,6 +18,7 @@ export class ListPage implements OnInit {
   ngOnInit() {
     this.list()
   }
+  
 
   salvar(){
     this.EventoService.saveeventos(this.Eventos).subscribe(res => {
