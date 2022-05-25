@@ -11,26 +11,31 @@
 <ion-content>
   <div class="fundo">
   <div *ngFor="let item of Agendas_crad">
+    <br>
     <ion-list>
       <ion-item>
         <ion-label>Nome:</ion-label> <ion-label>{{item.nome}}</ion-label>
       </ion-item>
     </ion-list>
+    <br>
     <ion-list>
       <ion-item>
         <ion-label>email:</ion-label>  <ion-label>{{item.email}}</ion-label>
       </ion-item>
     </ion-list>
+    <br>
     <ion-list>
       <ion-item>
         <ion-label>telefone:</ion-label> <ion-label>{{item.telefone}}</ion-label>
       </ion-item>
     </ion-list>
+    <br>
         <ion-list>
           <ion-item>
             <ion-label>messagem:</ion-label> <ion-label>{{item.messagem}}</ion-label>
           </ion-item>
         </ion-list>
+        <br>
   </div>
 </div>
 </ion-content>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AgendasService } from 'src/app/api/agendas.service';
+import { AlertController } from '@ionic/angular';
 @Component({
   selector: 'app-agendas',
   templateUrl: './agendas.page.html',
@@ -14,15 +15,22 @@ export class AgendasPage implements OnInit {
   };
   Agendas_crad:any = []
   
-    constructor(private AgendasService: AgendasService) { }
+    constructor(private AgendasService: AgendasService,public alertController: AlertController) { }
   
     ngOnInit() {
       this.list()
     }
+    async presentAlertMultipleButtons() {
+      const alert = await this.alertController.create({
+        message: "Agenda salva",
+      });
+  
+      await alert.present();
+    }
   
     salvar(){
       this.AgendasService.saveagenda(this.agendas).subscribe(res => {
-        console.log("agenda Salvar");
+        this.presentAlertMultipleButtons() 
       })
     }
     list(){

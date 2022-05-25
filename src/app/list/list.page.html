@@ -11,26 +11,31 @@
 <ion-content>
   <div class="fundo">
     <div *ngFor="let item of eventos_crad">
+      <br>
       <ion-list>
         <ion-item>
           <ion-label>Nome do evento:</ion-label> <ion-label>{{item.nome_evento}}</ion-label>
         </ion-item>
       </ion-list>
+      <br>
       <ion-list>
         <ion-item>
           <ion-label>Data:</ion-label>  <ion-label>{{item.Data}}</ion-label>
         </ion-item>
       </ion-list>
+      <br>
       <ion-list>
         <ion-item>
           <ion-label>Hora:</ion-label> <ion-label>{{item.Hora}}</ion-label>
         </ion-item>
       </ion-list>
+      <br>
           <ion-list>
             <ion-item>
               <ion-label>messagem:</ion-label> <ion-label>{{item.messagem}}</ion-label>
             </ion-item>
           </ion-list>
+          <br>
     </div>  
 </div>
 
