@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class EventosService {
 
-  urlApi = " http://backend-da-agenda.vercel.app";
+  urlApi = "http://127.0.0.1:8000/api";
   constructor(private http: HttpClient) { }
 
   geteventos(){
