@@ -31,6 +31,15 @@ const routes: Routes = [
     path: 'avaliar',
     loadChildren: () => import('./avaliar/avaliar.module').then( m => m.AvaliarPageModule)
   },
+  {
+    path: 'editar-agenda',
+    loadChildren: () => import('./editar-agenda/editar-agenda.module').then( m => m.EditarAgendaPageModule)
+  },
+  {
+    path: 'editar-eventos',
+    loadChildren: () => import('./editar-eventos/editar-eventos.module').then( m => m.EditarEventosPageModule)
+  },
+
  
 ];
 

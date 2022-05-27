@@ -1,10 +1,10 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title> Agendas  <div class="menu">
+    <ion-title>editar_agenda
+      <br>
       <a routerLink="/home">home </a>
-      <a routerLink="/eventos">eventos</a>
-    </div></ion-title>
-  
+      <a routerLink="/agendas">agendas</a>
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -15,9 +15,8 @@
     <ion-input [(ngModel)]="agendas.telefone" type=telefone>Digite seu telefone</ion-input>
     <ion-textarea [(ngModel)]="agendas.messagem" rows="6" cols="20" placeholder="messagem"></ion-textarea>
 
-    <ion-button color="primary" (click)="salvar()">Cradastrar</ion-button>
+    <ion-button color="primary" (click)="edit()">Cradastrar</ion-button>
     <ion-button routerLink="/lista-agenda" color="success">lista de agenda</ion-button>
-  
+ 
   </div>
-  
 </ion-content>

@@ -15,5 +15,14 @@ export class AgendasService {
       return this.http.post(`${this.urlApi}/agenda`, agendas);
   
     }
+    update(id: any, dados: any){
+
+      return this.http.put<any>(`${`${this.urlApi}/edit`}/${id}`, dados);
+      }
+      
+      destroy(id: any){
+      
+      return this.http.delete<any>(`${`${this.urlApi}/delete`}/${id}`);
+      }
     
 }

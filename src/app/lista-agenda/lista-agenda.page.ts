@@ -7,6 +7,7 @@ import { AgendasService } from 'src/app/api/agendas.service';
 })
 export class ListaAgendaPage implements OnInit {
   agendas = {
+    id:'',
     nome: '',
     email: '',
     telefone: '',
@@ -27,6 +28,14 @@ export class ListaAgendaPage implements OnInit {
   }
   list(){
     this.AgendasService.getAgendas().subscribe(res => {
+      this.Agendas_crad = res
+      console.log(res)
+    });
+  
+  }
+
+  edit(){
+    this.AgendasService.update(this.agendas.id,this.agendas).subscribe(res => {
       this.Agendas_crad = res
       console.log(res)
     });

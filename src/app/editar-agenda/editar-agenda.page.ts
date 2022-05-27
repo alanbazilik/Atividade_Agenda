@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { AgendasService } from 'src/app/api/agendas.service';
 import { AlertController } from '@ionic/angular';
 @Component({
-  selector: 'app-agendas',
-  templateUrl: './agendas.page.html',
-  styleUrls: ['./agendas.page.scss'],
+  selector: 'app-editar-agenda',
+  templateUrl: './editar-agenda.page.html',
+  styleUrls: ['./editar-agenda.page.scss'],
 })
-export class AgendasPage implements OnInit {
+export class EditarAgendaPage implements OnInit {
+
   agendas = {
     id:'',
     nome: '',
@@ -50,5 +51,7 @@ export class AgendasPage implements OnInit {
     }
   
   }
+
+
 
 
