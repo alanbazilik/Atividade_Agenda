@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col align-self-center style="align-items: center;">
+        <ion-icon name="person-sharp">Usuario</ion-icon>
+      <ion-input placeholder="digitar um Usuario"></ion-input >
+          <ion-icon name="ellipsis-horizontal-sharp">Senha</ion-icon>
+        <ion-input placeholder="digitar um senha"></ion-input >
+        <span class="already">Already a user?</span>
+        <ion-button [routerLink]="['/home']" expand="block" color="danger">Sign In</ion-button>
+        <ion-button [routerLink]="['/forgot-password']" expand="block" color="danger">forgot-password</ion-button>
+        <ion-button [routerLink]="['/registration']" expand="block" color="danger">registration</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
