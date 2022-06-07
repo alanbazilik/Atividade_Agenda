@@ -5,18 +5,27 @@
 </ion-header>
 
 <ion-content>
-  <ion-grid>
-    <ion-row>
-      <ion-col align-self-center style="align-items: center;">
-        <ion-icon name="person-sharp">Usuario</ion-icon>
-      <ion-input placeholder="digitar um Usuario"></ion-input >
-          <ion-icon name="ellipsis-horizontal-sharp">Senha</ion-icon>
-        <ion-input placeholder="digitar um senha"></ion-input >
-        <span class="already">Already a user?</span>
-        <ion-button [routerLink]="['/home']" expand="block" color="danger">Sign In</ion-button>
-        <ion-button [routerLink]="['/forgot-password']" expand="block" color="danger">forgot-password</ion-button>
-        <ion-button [routerLink]="['/registration']" expand="block" color="danger">registration</ion-button>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+  <form  #form="ngForm" (ngSubmit)="login(form)">
+    <ion-grid>
+      <ion-row color="primary" justify-content-center>
+        <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+          <div text-center>
+            <h3>Create your account!</h3>
+          </div>
+          <div padding>
+            <ion-item>
+              <ion-input  name="name" type="text" placeholder="Name" ngModel required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input name="password" type="password" placeholder="Password" ngModel required></ion-input>
+            </ion-item>
+          </div>
+          <div padding>
+            <ion-button  size="large" type="submit" [disabled]="form.invalid" expand="block">login</ion-button>
+            <ion-button  [routerLink]="['/registration']" size="large" type="submit" expand="block">Register</ion-button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
 </ion-content>
