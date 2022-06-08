@@ -22,7 +22,7 @@ export class RegistrationPage implements OnInit {
   ngOnInit() {
   }
   cradastrar(Name: string, email: string ,senha: string){
-    this.Registerservice.registar(this.cradastrar.name,this.cradastrar.email,this.cradastrar.senha).subscribe(res => {
+    this.Registerservice.registar(this.logins.Name,this.logins.email,this.logins.password).subscribe(res => {
  
     })
  }
